@@ -1,7 +1,7 @@
-# dom-to-source
+# element-to-source
 -------------------
 
-Library providing function to map a DOM element to source information, using debug metadata provided by (some) frameworks.
+Providing utility to map a DOM element to source information, using debug metadata provided by (some) frameworks.
 
 API:
 
