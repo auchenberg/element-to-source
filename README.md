@@ -7,7 +7,7 @@ API:
 
 ````javascript
 
-    let get = import 'dom-to-source';
+    let get = import 'element-to-source';
 
     var domElement = document.getElementById('#main');
 
