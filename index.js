@@ -1,22 +1,38 @@
 
+let getReactDebugSource = function(dom) {
+    for (var key in dom) {
+        if (key.startsWith('__reactInternalInstance$')) {
+            return dom[key]._debugSource;
+        }
+    }
+    return null;
+}
+
 function get(element) {
 
     var result = {
-        char: undefined,
-        column: undefined,
-        file: undefined,
-        line: undefined      
+        charNumber: undefined,
+        columnNumber: undefined,
+        fileName: undefined,
+        lineNumber: undefined      
     }
 
     // SvelteJS
     if(element.__svelte_meta) {
         var loc = element.__svelte_meta.loc;
         if(loc) {
-            result.file = loc.file;
-            result.column = loc.column;
-            result.char = loc.char;
-            result.line = loc.line;
+            result.fileName = loc.file;
+            result.lineNumber = loc.line;
+            result.columnNumber = loc.column;
+            result.charNumber = loc.char;
         }
+    }
+
+    // ReactJS
+    var debugSource = getReactDebugSource(element);
+    if(debugSource) {
+        result.fileName = debugSource.fileName;
+        result.lineNumber = debugSource.lineNumber;
     }
 
     return result;
