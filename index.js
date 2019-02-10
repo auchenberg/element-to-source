@@ -29,8 +29,8 @@ function get(element) {
     }
 
     // ReactJS
-    var debugSource = getReactDebugSource(element);
-    if(debugSource) {
+    var reactDebugSource = getReactDebugSource(element);
+    if(reactDebugSource) {
         result.fileName = debugSource.fileName;
         result.lineNumber = debugSource.lineNumber;
     }
