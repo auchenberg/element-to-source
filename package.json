@@ -1,11 +1,17 @@
 {
   "name": "element-to-source",
-  "version": "1.0.0",
-  "description": "-------------------",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Providing utility to map a DOM element to source information, using debug metadata provided by (some) frameworks.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kenneth Auchenbeg <kenneth@auchenberg.dk>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
 }

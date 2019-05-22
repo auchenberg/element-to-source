@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "target": "es2018",
+    "module": "es2015",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
