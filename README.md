@@ -6,10 +6,10 @@ Providing utility to map a DOM element to source information, using debug metada
 API:
 
 ````javascript
-    let get = import 'element-to-source';
+    import { resolve } from 'element-to-source';
     var domElement = document.getElementById('#main');
 
-    var sourceInfo = get(domElement);
+    var sourceMetadata = resolve(domElement);
     // {
     //     charNumber: 0,
     //     columnNumber: 0,
@@ -21,10 +21,15 @@ API:
 ## Supported frameworks
 
 - Svelte.js via https://github.com/sveltejs/svelte/issues/1499 (when in Dev Mode)
-- ReactJS via https://medium.com/@sitambas/get-global-element-state-a408a744e99d 
+- React / Create React App via https://medium.com/@sitambas/get-global-element-state-a408a744e99d 
 
-## Todo
+## Unsupported
+
+I would love to get help finding ways to enable any of these.
+
 - Angular
 - Vue.js
+- React + Parcel bundler
+- Next.js?
 - Web Components
 - Ionic?
